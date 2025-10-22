@@ -1,0 +1,59 @@
+:root{
+  --bg1:#0f2027;
+  --bg2:#2c5364;
+  --card: rgba(255,255,255,0.03);
+  --muted:#9aa4b2;
+  --accent1:#ff7aa2;
+  --accent2:#6ad3ff;
+  --max-w:1100px;
+  --radius:14px;
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.45;
+}
+.container{max-width:var(--max-w);margin:0 auto;padding:28px}
+.banner-wrap{position:relative}
+.banner-image{width:100%;height:auto;display:block;border-bottom-left-radius:18px;border-bottom-right-radius:18px;object-fit:cover}
+.banner-overlay{position:absolute;left:50%;transform:translateX(-50%);top:60px;text-align:center;color:#fff}
+.logo-circle{width:120px;height:120px;border-radius:50%;object-fit:cover;border:6px solid rgba(255,255,255,0.06);box-shadow:0 8px 28px rgba(2,6,23,0.6)}
+.site-title{margin:8px 0 0;font-size:28px;letter-spacing:1px}
+.site-sub{margin:4px 0 0;color:var(--muted)}
+.site-header .nav{display:flex;gap:12px;align-items:center;justify-content:center;padding:12px 0;background:transparent}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600}
+.btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));border:none;padding:10px 14px;border-radius:10px;color:#071428;font-weight:700;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.section{margin-top:28px}
+.card{background:var(--card);padding:20px;border-radius:12px;box-shadow: 0 6px 18px rgba(2,6,23,0.6);}
+.lead{color:var(--muted);max-width:780px}
+.muted{color:var(--muted)}
+.actions{display:flex;gap:12px;margin-top:12px}
+.socials{display:flex;gap:12px;margin-top:12px}
+.social{background:rgba(255,255,255,0.03);padding:10px 12px;border-radius:10px;text-decoration:none;color:#fff;font-weight:700}
+
+/* Roadmap styles */
+.timeline{display:grid;grid-template-columns:1fr;gap:16px;margin-top:12px}
+.milestone{display:flex;gap:14px;align-items:flex-start;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+.ms-badge{min-width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#071428;font-size:18px}
+.ms-content h4{margin:0 0 6px 0}
+.ms-content ul{margin:0;padding-left:18px;color:var(--muted)}
+.roadmap-image .full-roadmap{width:100%;height:auto;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.6);margin-top:12px}
+.share-line{margin-top:8px}
+
+/* Responsive */
+@media (min-width:900px){
+  .timeline{grid-template-columns:1fr 1fr;gap:18px}
+  .banner-overlay{top:80px}
+}
+@media (max-width:720px){
+  .banner-overlay{top:40px}
+  .logo-circle{width:96px;height:96px}
+  .site-title{font-size:20px}
+  .nav{flex-wrap:wrap;gap:8px}
+}
